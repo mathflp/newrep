@@ -1,0 +1,13 @@
+{
+	"nome": "ASP",
+	"cor_primaria": "0, 227, 192",
+	"cor_secundaria": "0, 58, 112",
+	"logo": "caminho",
+	"link": "https://asp.assinaturasempapel.com.br/api/",
+	"organizacoes": [
+		{
+			"NOME": "Teste Envio",
+			"CHAVE": "Teste Envio em Lote|a05393bfe0876642bf56dd2b1e00baba515382e0e1764d761350d2496823f0ac"
+		}
+	]
+}

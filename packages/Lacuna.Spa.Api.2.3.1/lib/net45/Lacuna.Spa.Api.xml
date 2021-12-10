@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lacuna.Spa.Api</name>
+    </assembly>
+    <members>
+        <member name="P:Lacuna.Spa.Api.Applications.ApplicationData`4.Name">
+            <summary>
+            The name of the application. Please note that application names are unique in each subscription.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Spa.Api.Applications.ApplicationData`4.AuthorizationData">
+            <summary>
+            The application's roles on the subscription. Fill this field only when creating an application on a subscription. When
+            creating a "system admin" application, ignore this field and specify the field `RootAuthorizationData` instead.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Spa.Api.Applications.ApplicationData`4.RootAuthorizationData">
+            <summary>
+            The application's global roles. Fill this field only when creating a "system admin" application. When creating an
+            application on a subscription, ignore this field and specify the field `AuthorizationData` instead.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Spa.Api.PaginatedSearchParams.Q">
+            <summary>
+            Text query term to filter the results (optional)
+            </summary>
+        </member>
+        <member name="P:Lacuna.Spa.Api.PaginatedSearchParams.Limit">
+            <summary>
+            The maximum number of records that should be returned. If implementing pagination, use this as the page size. If omitted, the default limit of 10 records is returned.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Spa.Api.PaginatedSearchParams.Offset">
+            <summary>
+            The number of records at the beginning of the list to be skipped. If implementing pagination, multiply the page number (0-based) by the page size to get this number.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Spa.Api.PaginatedSearchParams.Cursor">
+            <summary>
+            Contains information about the first element on a page. If in a cursor based search and the cursor is null, it is not necessary to filter the items by the cursor.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Spa.Api.PaginatedSearchParams.Order">
+            <summary>
+            Denotes if records should be ordered in an ascending or descending order.
+            </summary>
+        </member>
+    </members>
+</doc>

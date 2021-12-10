@@ -1,0 +1,930 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lacuna.Signer.Api</name>
+    </assembly>
+    <members>
+        <member name="P:Lacuna.Signer.Api.Approval.BatchApprovalRequest.DisableNotifications">
+            <summary>
+            If true the participants of the documents wont`t be notified
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Attachments.AttachmentModel.Filename">
+            <summary>
+            The attachment's file name.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Attachments.AttachmentModel.FileSize">
+            <summary>
+            The attachment's file size in bytes.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Attachments.AttachmentModel.MimeType">
+            <summary>
+            The attachment's file mime type.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Attachments.AttachmentModel.CreationDate">
+            <summary>
+            The date the attachment was created.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Attachments.AttachmentModel.UpdateDate">
+            <summary>
+            The date of the last update to the attachment.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Attachments.AttachmentModel.CreatedBy">
+            <summary>
+            The user or application that created the document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Attachments.CreateAttachmentResult.UploadId">
+            <summary>
+            The Id of the uploaded attachment, from the request <see cref="P:Lacuna.Signer.Api.UploadModel.Id"/>.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Attachments.CreateAttachmentResult.AttachmentId">
+            <summary>
+            The Id of the newly created attachment.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Billing.BillingDetailsModel.CanManage">
+            <summary>
+            True if the user can manage the list of notified emails of the organization
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Billing.BillingDetailsModel.CanViewPaymentInfo">
+            <summary>
+            True if the user can view payment information of the organization
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Billing.BillingDetailsModel.CanPayInvoices">
+            <summary>
+            True if the user can pay invoices of the organization
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Billing.BillingAddressModel.Address">
+            <summary>
+            International address line 1.
+            Currently not used
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Billing.BillingAddressModel.Address2">
+            <summary>
+            International address line 2.
+            Currently not used
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Billing.BillingAddressModel.CityCode">
+            <summary>
+            IBGE Code
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.DocumentMark.DocumentMarkModel.IsPrePositioned">
+            <summary>
+            True if the mark was positioned before the flow action was completed.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.DocumentMark.DocumentMarkModel.IsReadyToBeStamped">
+            <summary>
+            True if the mark can be stamped in the document, that means the flow action associated with this mark is completed and the user chose to apply this mark.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.DocumentMark.DocumentMarkModel.IsStampedOnCMS">
+            <summary>
+            True if this mark is stamped on the CMS.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.DocumentMark.DocumentMarkPositionModel.TopLeftX">
+            <summary>
+            X position of the top left point of the mark (in PDF points).
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.DocumentMark.DocumentMarkPositionModel.TopLeftY">
+            <summary>
+            Y position of the top left point of the mark (in PDF points).
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.DocumentMark.DocumentMarkPositionModel.Width">
+            <summary>
+            Width of the mark (in PDF points).
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.DocumentMark.DocumentMarkPositionModel.Height">
+            <summary>
+            Height of the mark (in PDF points).
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.DocumentMark.DocumentMarkPositionModel.PageNumber">
+            <summary>
+            The page number of the mark.
+            </summary>
+        </member>
+        <member name="T:Lacuna.Signer.Api.DocumentMark.PrePositionedDocumentMarkModel">
+            <summary>
+            Model used to set the position of a document mark before it's associated flow action is completed.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.DocumentMark.PrePositionedDocumentMarkModel.UploadId">
+            <summary>
+            The file to which this mark should be applied.
+            If null it will be applied to all sent files.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.ActionUrlRequest.Identifier">
+            <summary>
+            The identifier (CPF in Brazil or Cédula de Identidad in Ecuador) of the participant to whom you want to get the ticket.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.ActionUrlRequest.EmailAddress">
+            <summary>
+            The email of the participant to whom you want to get the ticket.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.ActionUrlResponse.Url">
+            <summary>
+            The URL to redirect the user to the first pending action found.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.ActionUrlResponse.EmbedUrl">
+            <summary>
+            The URL to embed the action in a iframe to use in your own application.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.CreateDocumentDetails.FolderId">
+            <summary>
+            The id of the folder in which the document should be placed or null if it should not be placed in any specific folder.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.CreateDocumentDetails.Description">
+            <summary>
+            A description to be added to the document(s). This will be presented to all participants in the document details screen and 
+            in pending action notifications.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.CreateDocumentDetails.FlowActions">
+            <summary>
+            The list of actions (signers and approvers) that will be in the document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.CreateDocumentDetails.DisablePendingActionNotifications">
+            <summary>
+            If true the notifications of pending actions won't be sent to the participants of the first step.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.CreateDocumentDetails.NewFolderName">
+            <summary>
+            The name of a new folder to be created and associated to the document. If you do not wish to create a new folder you may set this as null.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.CreateDocumentDetails.ForceCadesSignature">
+            <summary>
+            If this property is set to true, then the document will be signed using the CAdES format.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.CreateDocumentDetails.NotifiedEmails">
+            <summary>
+            The emails to notify when the document is concluded.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.CreateDocumentRequest.Files">
+            <summary>
+            The files to submit. Each file will create a document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.CreateDocumentRequest.Attachments">
+            <summary>
+            The attachments to submit. Each document will have the same attachments.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.CreateDocumentRequest.XmlNamespaces">
+            <summary>
+            Optional parameter for XML documents. This namespace will be used by all files in <see cref="P:Lacuna.Signer.Api.Documents.CreateDocumentRequest.Files"/>.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.CreateDocumentResult.UploadId">
+            <summary>
+            The Id of the uploaded file, from the request <see cref="P:Lacuna.Signer.Api.UploadModel.Id"/>.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.CreateDocumentResult.DocumentId">
+            <summary>
+            The Id of the newly created document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.CreateDocumentResult.Attachments">
+            <summary>
+            Result of creating attachments
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.CreateDocumentsResponse.RectifiedParticipants">
+            <summary>
+            If there are already registered users with the information provided for flow actions and observers 
+            this property presents the differences between what was requested and what was in fact submitted.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentFlowEditRequest.AddedFlowActions">
+            <summary>
+            The actions to be added to the flow.
+            The <see cref="P:Lacuna.Signer.Api.FlowActions.FlowActionCreateModel.Step"/> must be greater or equal to the current pending step.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentFlowEditRequest.EditedFlowActions">
+            <summary>
+            The existing actions to be modified.
+            Flow actions that have already been completed or are partially completed cannot be edited.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentFlowEditRequest.DeletedFlowActionIds">
+            <summary>
+            The Ids of flow actions to be deleted.
+            Flow actions that have already been completed or are partially completed cannot be deleted.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentFlowEditRequest.AddedObservers">
+            <summary>
+            The observers to be added to the document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentFlowEditRequest.EditedObservers">
+            <summary>
+            The existing observers to be modified.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentFlowEditRequest.DeletedObserverIds">
+            <summary>
+            The Ids of observers to be deleted.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentListParameters.FilterByDocumentType">
+            <summary>
+            True if the documents should be filtered by type, use documentType to specify the document type.
+            If you want to filter only documents without a type, set this parameter to true and the documentType to null.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentListParameters.FilterByPendingSignature">
+            <summary>
+            True if documents should be filtered only for those that have FlowAction of the type Signer or SignRule
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentModel.ChecksumMd5">
+            <summary>
+            MD5 checksum of the document's file.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentModel.IsDeleted">
+            <summary>
+            True if the document is deleted.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentModel.FlowActions">
+            <summary>
+            Signers and approvers of the document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentModel.Observers">
+            <summary>
+            Observers of the document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentModel.Attachments">
+            <summary>
+            Document attachments
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentModel.Permissions">
+            <summary>
+            The permissions the authenticated user has for this document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentInfoModel.Filename">
+            <summary>
+            The document's file name.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentInfoModel.FileSize">
+            <summary>
+            The document's file size in bytes.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentInfoModel.MimeType">
+            <summary>
+            The document's file mime type.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentInfoModel.HasSignature">
+            <summary>
+            True if the document was already signed once.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentInfoModel.Status">
+            <summary>
+            The status of the document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentInfoModel.IsConcluded">
+            <summary>
+            [DEPRECATED] True if all actions requested in the document are concluded. Please use <see cref="P:Lacuna.Signer.Api.Documents.DocumentInfoModel.Status"/> instead.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentInfoModel.Folder">
+            <summary>
+            The document's folder if it has any.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentInfoModel.Organization">
+            <summary>
+            The document's organization or null if it is a personal document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentInfoModel.CreationDate">
+            <summary>
+            The date the document was created.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentInfoModel.UpdateDate">
+            <summary>
+            The date of the last update to the document. This includes the following actions: moving to folder, signing, approving, deleting and editing the flow.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentInfoModel.CreatedBy">
+            <summary>
+            The user or application that created the document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentInfoModel.IsScanned">
+            <summary>
+            True if the document source was a scanning process.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentNotifiedEmailsEditRequest.Emails">
+            <summary>
+            The emails to notify when the document is concluded.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentSignaturesInfoModel.IsConcluded">
+            <summary>
+            True if all actions requested in the document are concluded.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.DocumentSignaturesInfoModel.Signers">
+            <summary>
+            List of who signed the document.
+            Each element in the list contains a validation result.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.MoveDocumentRequest.OrganizationId">
+            <summary>
+            This parameter is hidden on swagger because an Application cannot move documents between organizations.
+            When this parameter is null, the organization is inferred.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.MoveDocumentRequest.FolderId">
+            <summary>
+            The Id of the folder to which the document(s) will be moved.
+            The folder Id can be null if you want to move the document(s) to no folder or if you want to create a new folder using <see cref="P:Lacuna.Signer.Api.Documents.MoveDocumentRequest.NewFolderName"/>.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.MoveDocumentRequest.NewFolderName">
+            <summary>
+            The name of the folder to be created and the documents will be moved to. (If <see cref="P:Lacuna.Signer.Api.Documents.MoveDocumentRequest.FolderId"/> is null)
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Documents.MoveDocumentBatchRequest.Documents">
+            <summary>
+            The Ids of the documents that will be moved.
+            </summary>
+        </member>
+        <member name="F:Lacuna.Signer.Api.NotaryTypes.Test">
+            <summary> Notary configuration that doesn't require a specific PKI </summary>
+        </member>
+        <member name="T:Lacuna.Signer.Api.AuthenticationTypes">
+            <summary>
+            This enum is used as flags, the order and values matter!
+            </summary>
+        </member>
+        <member name="F:Lacuna.Signer.Api.CertificateSources.User">
+            <summary>
+            A certificate which the data was obtained when the user signed a document or manually added the certificate.
+            </summary>
+        </member>
+        <member name="F:Lacuna.Signer.Api.CertificateSources.Amplia">
+            <summary>
+            A certificate that was issued by Amplia.
+            </summary>
+        </member>
+        <member name="F:Lacuna.Signer.Api.CertificateSources.LocalCA">
+            <summary>
+            A certificate that was issued by a local CA.
+            </summary>
+        </member>
+        <member name="F:Lacuna.Signer.Api.CertificateSources.HsmImport">
+            <summary>
+            A certificate that was imported from a HSM.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FileUploadModel.DisplayName">
+            <summary>
+            This is the name the document will display in the application.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.UploadModel.Id">
+            <summary>
+            The upload Id as returned by the <a href="#operations-Upload-post_api_uploads">Upload API</a>
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.UploadModel.Name">
+            <summary>
+            The file's original name.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.UploadModel.ContentType">
+            <summary>
+            The file's mime type. Unless overridden, PDF mime types will be signed as PAdES and all other types as CAdES.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionCreateModel.Step">
+            <summary>
+            The order in which this action should take place.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionCreateModel.NumberRequiredSignatures">
+            <summary>
+            Number of required signatures (if type is SignRule)
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionCreateModel.RuleName">
+            <summary>
+            Name of the rule (if type is SignRule)
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionCreateModel.Title">
+            <summary>
+            Title of the participant
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionCreateModel.AllowElectronicSignature">
+            <summary>
+            Set to true if the electronic signature option should be available. (only if the type of the action is Signer or SignRule)
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionCreateModel.RequireSmsAuthenticationToSignElectronically">
+            <summary>
+            Requires the user to confirm a code sent to his phone to sign electronically. (If <see cref="P:Lacuna.Signer.Api.FlowActions.FlowActionCreateModel.AllowElectronicSignature"/> is true)
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionCreateModel.RequireAuthenticatorAppToSignElectronically">
+            <summary>
+            Requires the user to enter a one-time password (OTP) to sign electronically. (If <see cref="P:Lacuna.Signer.Api.FlowActions.FlowActionCreateModel.AllowElectronicSignature"/> is true)
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionCreateModel.RequireSelfieAuthenticationToSignElectronically">
+            <summary>
+            Requires the user to take a selfie to sign electronically. (If <see cref="P:Lacuna.Signer.Api.FlowActions.FlowActionCreateModel.AllowElectronicSignature"/> is true)
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionCreateModel.XadesOptions">
+            <summary>
+            Optional parameters for signatures on XML documents.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionEditModel.FlowActionId">
+            <summary>
+            The Id of the flow action being modified.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionEditModel.Step">
+            <summary>
+            The new step of the action.
+            This must be greater or equal to the current pending step.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionEditModel.ParticipantEmailAddress">
+            <summary>
+            The new email address of the action's participant (if the type is <see cref="F:Lacuna.Signer.Api.FlowActionType.Signer"/> or <see cref="F:Lacuna.Signer.Api.FlowActionType.Approver"/>).
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionEditModel.RuleName">
+            <summary>
+            The new rule name (if the type is <see cref="F:Lacuna.Signer.Api.FlowActionType.SignRule"/>).
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionEditModel.SignRuleUsers">
+            <summary>
+            The rule users to be edited (if the type is <see cref="F:Lacuna.Signer.Api.FlowActionType.SignRule"/>).
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionModel.NumberRequiredSignatures">
+            <summary>
+            Number of required signatures if type is SignRule
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionModel.RuleName">
+            <summary>
+            Name of the rule if type is SignRule
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionModel.Title">
+            <summary>
+            Title of the participant
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionModel.SignRuleUsers">
+            <summary>
+            Users that are allowed to sign if type is SignRule
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionModel.AllowElectronicSignature">
+            <summary>
+            True if the electronic signature option is available for this action (only if the type of the action is Signer or SignRule)
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionModel.RequireSmsAuthenticationToSignElectronically">
+            <summary>
+            Requires the user to confirm a code sent to his phone to sign electronically. (If <see cref="P:Lacuna.Signer.Api.FlowActions.FlowActionModel.AllowElectronicSignature"/> is true)
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionModel.RequireAuthenticatorAppToSignElectronically">
+            <summary>
+            Requires the user to enter a one-time password (OTP) to sign electronically. (If <see cref="P:Lacuna.Signer.Api.FlowActions.FlowActionModel.AllowElectronicSignature"/> is true)
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.FlowActionModel.RequireSelfieAuthenticationToSignElectronically">
+            <summary>
+            Requires the user to take a selfie to sign electronically. (If <see cref="P:Lacuna.Signer.Api.FlowActions.FlowActionModel.AllowElectronicSignature"/> is true)
+            </summary>
+        </member>
+        <member name="T:Lacuna.Signer.Api.FlowActions.PendingActionModel">
+            <summary>
+            Contains the ids of the pending actions if there are any.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.PublicActionInfoModel.Document">
+            <summary>
+            The basic info of the document identified by the ticket.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.PublicActionInfoModel.PendingFlowAction">
+            <summary>
+            Pending flow action associated with this ticket, if the action has already been completed this is null.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.PublicActionInfoModel.Identifier">
+            <summary>
+            The identifier (CPF in Brazil or Cédula de Identidad in Ecuador) of the user that needs to sign the document, if action is pending.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.PublicActionInfoModel.EmailAddress">
+            <summary>
+            The email address hint of the user that needs to sign the document, if action is pending.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.PublicActionInfoModel.Name">
+            <summary>
+            The name of the user that needs to sign the document, if action is pending.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.PublicActionInfoModel.Attachments">
+            <summary>
+            Document attachments
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.SignRuleUserModel.Identifier">
+            <summary>
+            The user identifier (CPF in Brazil or Cédula de Identidad in Ecuador).
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.XadesOptionsModel.ElementToSignIdentifierType">
+            <summary>
+            The type of identifier on <see cref="P:Lacuna.Signer.Api.FlowActions.XadesOptionsModel.ElementToSignIdentifier"/>.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.XadesOptionsModel.ElementToSignIdentifier">
+            <summary>
+            A string used to identify the element that should be signed.
+            If the <see cref="P:Lacuna.Signer.Api.FlowActions.XadesOptionsModel.ElementToSignIdentifierType"/> is <see cref="F:Lacuna.Signer.Api.XadesElementIdentifierTypes.Id"/>, this string is the Id of the element to be signed.
+            If the <see cref="P:Lacuna.Signer.Api.FlowActions.XadesOptionsModel.ElementToSignIdentifierType"/> is <see cref="F:Lacuna.Signer.Api.XadesElementIdentifierTypes.XPath"/>, this string is the XPath to the element to be signed.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.XadesOptionsModel.InsertionOption">
+            <summary>
+            The position which the signature will be inserted, regarding the signed element.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.FlowActions.XadesOptionsModel.DisableXPathTransformation">
+            <summary>
+            By default the XPath transformation is applied in all XAdES signatures. You can set a flow action to not apply the transformation by setting this option to true.
+            WARNING: If you disable the XPath transformation the signatures might be considered invalid in some validators if the same XML element is signed multiple times.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Folders.FolderCreateRequest.ParentId">
+            <summary>
+            Id of the parent folder. Set as null to create the folder as root.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Folders.FolderCreateRequest.OrganizationId">
+            <summary>
+            This parameter is hidden on swagger because an Application can create folder only on it's organization.
+            When this parameter is null, the organization is inferred.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Folders.FolderDeleteRequest.DeleteAction">
+            <summary>
+            Options of what will happen to the folder's documents.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Folders.FolderDeleteRequest.DestinationOrganizationId">
+            <summary>
+            This parameter is hidden on swagger because an Application cannot move documents between organizations.
+            When this parameter is null, the organization is inferred.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Folders.FolderDeleteRequest.DestinationFolderId">
+            <summary>
+            The folder to which the documents will be moved (if <see cref="P:Lacuna.Signer.Api.Folders.FolderDeleteRequest.DeleteAction"/> is <see cref="F:Lacuna.Signer.Api.DeleteAction.MoveContent"/>).
+            This value can be null if you want to keep the documents with no folder.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Observers.ObserverEditModel.ObserverId">
+            <summary>
+            Id of the observer being modified.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Observers.ObserverEditModel.EmailAddress">
+            <summary>
+            The new email of the observer.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Organizations.OrganizationDocumentListParameters.Status">
+            <summary>
+            If null, this filter will not be applied.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Organizations.OrganizationDocumentListParameters.FolderId">
+            <summary>
+            If not null, filter only the documents in this folder.
+            This parameter is used only if <see cref="P:Lacuna.Signer.Api.Organizations.OrganizationDocumentListParameters.FolderType"/> is <see cref="F:Lacuna.Signer.Api.FolderType.Normal"/>
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Organizations.OrganizationDocumentListParameters.FolderType">
+            <summary>
+            If <see cref="F:Lacuna.Signer.Api.FolderType.Normal"/> the <see cref="P:Lacuna.Signer.Api.Organizations.OrganizationDocumentListParameters.FolderId"/> will be used to filter the documents.
+            If <see cref="F:Lacuna.Signer.Api.FolderType.WithoutFolder"/>, only documents without folder will be returned.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Organizations.OrganizationDocumentListParameters.FilterByDocumentType">
+            <summary>
+            True if the documents should be filtered by type, use <see cref="P:Lacuna.Signer.Api.Organizations.OrganizationDocumentListParameters.DocumentType"/> to specify the document type.
+            If you want to filter only documents without a type, set this parameter to true and the <see cref="P:Lacuna.Signer.Api.Organizations.OrganizationDocumentListParameters.DocumentType"/> to null.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Organizations.OrganizationInfoModel.Identifier">
+            <summary>
+            The organization identifier (CNPJ)
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Organizations.OrganizationInfoModel.Owner">
+            <summary>
+            Owner of the personal organization. This field is null if the organization isn't personal.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.CompleteSignatureRequest.DisableNotifications">
+            <summary>
+            If true the participants of the document wont`t be notified
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.BaseElectronicSignatureRequest.UserTimeZoneOffset">
+            <summary>
+            The user's timezone offset in minutes, this is the timezone that will appear on the signature's visual representation.
+            This offset is the difference from UTC to the user's time, that is, if the user's timezone is UTC-3 this offset should be -180.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.EvidencesModel.AuthenticationTypes">
+            <summary>
+            A list containing the the authentication types used when signing the document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.EvidencesModel.AccountVerifiedEmail">
+            <summary>
+            If the user was logged-in when he signed the document this is the verified email of his account.
+            If <see cref="P:Lacuna.Signer.Api.Signature.EvidencesModel.AuthenticationTypes"/> doesn't contains <see cref="F:Lacuna.Signer.Api.AuthenticationTypes.Login"/> this will be null.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.EvidencesModel.AuthenticatedEmail">
+            <summary>
+            The email to which the notification to sign the document was sent.
+            If <see cref="P:Lacuna.Signer.Api.Signature.EvidencesModel.AuthenticationTypes"/> doesn't contains <see cref="F:Lacuna.Signer.Api.AuthenticationTypes.Email"/> this will be null.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.EvidencesModel.AuthenticatedPhoneNumberLastDigits">
+            <summary>
+            The last four digits of the phone number to which the SMS confirmation code was sent.
+            If <see cref="P:Lacuna.Signer.Api.Signature.EvidencesModel.AuthenticationTypes"/> doesn't contains <see cref="F:Lacuna.Signer.Api.AuthenticationTypes.SMS"/> this will be null.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.EvidencesModel.AuthenticatedApplication">
+            <summary>
+            The information about the application which obtained a link to the sign page.
+            If <see cref="P:Lacuna.Signer.Api.Signature.EvidencesModel.AuthenticationTypes"/> doesn't contains <see cref="F:Lacuna.Signer.Api.AuthenticationTypes.Application"/> this will be null.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.EvidencesModel.AuthenticatedSelfie">
+            <summary>
+            The selfie taken by the user to sign the document.
+            If <see cref="P:Lacuna.Signer.Api.Signature.EvidencesModel.AuthenticationTypes"/> doesn't contains <see cref="F:Lacuna.Signer.Api.AuthenticationTypes.Selfie"/> this will be null.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.EvidencesModel.EvidencesSha256">
+            <summary>
+            SHA-256 Hash (Base64 encoded) of the evidences JSON file
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.EvidencesModel.AuthenticatedPhoneNumber">
+            <summary>
+            The phone number to which the SMS confirmation code was sent.
+            If <see cref="P:Lacuna.Signer.Api.Signature.EvidencesModel.AuthenticationTypes"/> doesn't contains <see cref="F:Lacuna.Signer.Api.AuthenticationTypes.SMS"/> this will be null.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.EvidencesModel.File">
+            <summary>
+            The evidences JSON file in bytes.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.EvidencesModel.FileTicket">
+            <summary>
+            Ticket to download the evidences JSON file.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.HsmFileSignatureRequest.UserTimeZoneOffset">
+            <summary>
+            The user's timezone offset in minutes, this is the timezone that will appear on the signature's visual representation.
+            This offset is the difference from UTC to the user's time, that is, if the user's timezone is UTC-3 this offset should be -180.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.HsmSignatureRequest.UserTimeZoneOffset">
+            <summary>
+            The user's timezone offset in minutes, this is the timezone that will appear on the signature's visual representation.
+            This offset is the difference from UTC to the user's time, that is, if the user's timezone is UTC-3 this offset should be -180.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.RemoteFastSignatureRequest.UserTimeZoneOffset">
+            <summary>
+            The user's timezone offset in minutes, this is the timezone that will appear on the signature's visual representation.
+            This offset is the difference from UTC to the user's time, that is, if the user's timezone is UTC-3 this offset should be -180.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.BaseSendSmsAuthenticationCodeRequest.Resend">
+            <summary>
+            If true the previous code will be resend if it's still valid
+            </summary>
+        </member>
+        <member name="T:Lacuna.Signer.Api.Signature.SignatureEvidencesFromClientModel">
+            <summary>
+            The signature evidences that are captured by the front-end
+            </summary>
+        </member>
+        <member name="M:Lacuna.Signer.Api.Signature.GeolocationModel.HasAny">
+            <summary>
+            Check if there is any property that isn't null or empty
+            </summary>
+        </member>
+        <member name="M:Lacuna.Signer.Api.Signature.GeolocationModel.HasAll">
+            <summary>
+            Check if there all properties aren't null or empty
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.SignaturesInfoRequest.FileId">
+            <summary>
+            Id of the uploaded file.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.StartFastSignatureRequest.UserTimeZoneOffset">
+            <summary>
+            The user's timezone offset in minutes, this is the timezone that will appear on the signature's visual representation.
+            This offset is the difference from UTC to the user's time, that is, if the user's timezone is UTC-3 this offset should be -180.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.StartFileSignatureRequest.UserTimeZoneOffset">
+            <summary>
+            The user's timezone offset in minutes, this is the timezone that will appear on the signature's visual representation.
+            This offset is the difference from UTC to the user's time, that is, if the user's timezone is UTC-3 this offset should be -180.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Signature.BaseStartSignatureRequest.UserTimeZoneOffset">
+            <summary>
+            The user's timezone offset in minutes, this is the timezone that will appear on the signature's visual representation.
+            This offset is the difference from UTC to the user's time, that is, if the user's timezone is UTC-3 this offset should be -180.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Transactions.PriceRangeModel.Limit">
+            <summary>
+            The upper limit of the price range.
+            If the limit is null, this is the price when the number of transactions exceed the limit of all the other ranges.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Transactions.TransactionPriceModel.Price">
+            <summary>
+            Price of the transaction type (if <see cref="P:Lacuna.Signer.Api.Transactions.TransactionPriceModel.PricingType"/> is <see cref="F:Lacuna.Signer.Api.TransactionPricingTypes.Simple"/>)
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Transactions.TransactionPriceModel.PriceRanges">
+            <summary>
+            Price ranges of transaction type (if <see cref="P:Lacuna.Signer.Api.Transactions.TransactionPriceModel.PricingType"/> is <see cref="F:Lacuna.Signer.Api.TransactionPricingTypes.Range"/>)
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.TrustServiceProviders.BaseTrustServiceProviderSignRequest.DocumentId">
+            <summary>
+            Should be provided only for logged in signatures
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.TrustServiceProviders.BaseTrustServiceProviderSignRequest.Ticket">
+            <summary>
+            Should be provided only for public signatures
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.TrustServiceProviders.BaseTrustServiceProviderSignRequest.Key">
+            <summary>
+            Should be provided only for public signatures
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.TrustServiceProviders.BaseTrustServiceProviderSignRequest.UserTimeZoneOffset">
+            <summary>
+            The user's timezone offset in minutes, this is the timezone that will appear on the signature's visual representation.
+            This offset is the difference from UTC to the user's time, that is, if the user's timezone is UTC-3 this offset should be -180.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Uploads.UploadBytesModel.Id">
+            <summary>
+            The ID of the uploaded file so it can be used to create documents.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Uploads.UploadBytesModel.Size">
+            <summary>
+            The size in bytes of the received file.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Uploads.UploadBytesModel.Digest">
+            <summary>
+            The MD5 digest (hash) of the received file. Can be used for integrity checks.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Uploads.UploadBytesRequest.Bytes">
+            <summary>
+            The file bytes encoded in Base 64 format.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Users.ParticipantUserModel.Identifier">
+            <summary>
+            The user identifier (CPF in Brazil and Cédula de Identidad in Ecuador).
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Users.ParticipantUserModel.Phone">
+            <summary>
+            The user's mobile phone number. It will be set only if the user does not exist, i.e. it will not override
+            existing user's phones.
+            Must use iternational format, example: +55 11 91234-5678
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Webhooks.DocumentInformationModel.Id">
+            <summary>
+            The document's id
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Webhooks.DocumentInformationModel.Name">
+            <summary>
+            The document's name
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Webhooks.DocumentInformationModel.CreationDate">
+            <summary>
+            The date the document was created.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Webhooks.DocumentInformationModel.UpdateDate">
+            <summary>
+            The date of the last update to the document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Webhooks.DocumentInformationModel.Folder">
+            <summary>
+            The document's folder if it has any.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Webhooks.DocumentInformationModel.Organization">
+            <summary>
+            The document's organization or null if it is a personal document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Webhooks.DocumentInformationModel.CreatedBy">
+            <summary>
+            The user or application that created the document.
+            </summary>
+        </member>
+        <member name="P:Lacuna.Signer.Api.Webhooks.WebhookModel.Data">
+            <summary>
+            The type-specific data of this webhook event. Check the documentation to see the corresponding model for an event type.
+            </summary>
+        </member>
+    </members>
+</doc>

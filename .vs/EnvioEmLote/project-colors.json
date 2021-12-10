@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "19c1b3cc-c431-4d2e-8990-0b44518dbfa7": {
+      "ProjectGuid": "19c1b3cc-c431-4d2e-8990-0b44518dbfa7",
+      "DisplayName": "EnvioEmLote",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}
